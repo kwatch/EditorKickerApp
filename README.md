@@ -23,7 +23,8 @@ Install
 
 1. Download [zip file](https://github.com/kwatch/EditorKickerApp/archive/refs/tags/v0.2.0.zip)
    from [download page](https://github.com/kwatch/EditorKickerApp/tags) and unzip it.
-2. Double click `setup.command` script (!!!IMPORTANT!!!).
+2. Control-click (or Right-click) `setup.command` script and select 'Open'.
+   Confirmation dialog will be displayed, then click 'Open' button.
 3. Move EditorKicker.app to '/Applications' folder.
 4. Double click EditorKicker.app under '/Applications' folder.
    This will generates `$HOME/.config/EditorKicker/command` file.
