@@ -52,6 +52,16 @@ See: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-li
 Or:
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/
+[Terminal]$ which code
+/usr/local/bin/code
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/Visual Studio Code.app"
 [Terminal]$ ls -d "$d"
 /Applications/Visual Studio Code.app
@@ -62,6 +72,7 @@ Or:
 [Terminal]$ which code
 /usr/local/bin/code
 ```
+-->
 
 ### TextMate
 
@@ -72,6 +83,16 @@ Or:
 Or:
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/TextMate.app/Contents/MacOS/mate" /usr/local/bin/
+[Terminal]$ which mate
+/usr/local/bin/mate
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/TextMate.app"
 [Terminal]$ ls -d "$d"
 /Applications/TextMate.app
@@ -82,6 +103,7 @@ Or:
 [Terminal]$ which mate
 /usr/local/bin/mate
 ```
+-->
 
 ### Sublime
 
@@ -90,6 +112,16 @@ See: https://www.sublimetext.com/docs/command_line.html#mac
 Or:
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/
+[Terminal]$ which subl
+/usr/local/bin/subl
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/Sublime Text.app"
 [Terminal]$ ls -d "$d"
 /Applications/Sublime Text.app
@@ -100,6 +132,7 @@ Or:
 [Terminal]$ which subl
 /usr/local/bin/subl
 ```
+-->
 
 ### PyCharm
 
@@ -108,6 +141,16 @@ See: https://www.jetbrains.com/help/pycharm/working-with-the-ide-features-from-c
 Or:
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/PyCharm CE.app/Contents/MacOS/pycharm" /usr/local/bin/
+[Terminal]$ which pycharm
+/usr/local/bin/pycharm
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/PyCharm CE.app"  # for community edition
 [Terminal]$ ls -d "$d"
 /Applications/PyCharm CE.app
@@ -118,10 +161,19 @@ Or:
 [Terminal]$ which pycharm
 /usr/local/bin/pycharm
 ```
+-->
 
 ### Emacs
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient" /usr/local/bin/
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/Emacs.app"
 [Terminal]$ ls -d "$d"
 /Applications/Emacs.app
@@ -132,10 +184,21 @@ Or:
 [Terminal]$ which emacsclient
 /usr/local/bin/emacsclient
 ```
+-->
 
 ### MacVim
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/MacVim.app/Contents/bin/mvim" /usr/local/bin/
+[Terminal]$ which mvim
+/usr/local/bin/mvim
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/MacVim.app"
 [Terminal]$ ls -d "$d"
 /Applications/MacVim.app
@@ -146,6 +209,7 @@ Or:
 [Terminal]$ which mvim
 /usr/local/bin/mvim
 ```
+-->
 
 ### CotEditor
 
@@ -154,6 +218,16 @@ See: https://coteditor.com/cot
 Or:
 
 ```console
+[Terminal]$ sudo ln -s "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" /usr/local/bin/
+[Terminal]$ which cot
+/usr/local/bin/cot
+```
+
+<!--
+Or:
+
+```console
+## step by step way
 [Terminal]$ d="/Applications/CotEditor.app"
 [Terminal]$ ls -d "$d"
 /Applications/CotEditor.app
@@ -164,11 +238,21 @@ Or:
 [Terminal]$ which cot
 /usr/local/bin/cot
 ```
+-->
 
 ### Zed
 
 1. Menu: Zed > Install CLI
 
+Or:
+
+```console
+[Terminal]$ sudo ln -s "/Applications/Zed.app/Contents/MacOS/cli" /usr/local/bin/zed
+[Terminal]$ which zed
+/usr/local/bin/zed
+```
+
+<!--
 Or:
 
 ```console
@@ -182,6 +266,7 @@ Or:
 [Terminal]$ which zed
 /usr/local/bin/zed
 ```
+-->
 
 
 Custom URL Schema Format
