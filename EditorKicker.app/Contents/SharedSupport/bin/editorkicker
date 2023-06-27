@@ -1,0 +1,86 @@
+#!/bin/sh
+
+###
+### Handler of custom URL schema 'texteditor://'
+###
+### Usage:
+###   $ editorkicker texteditor:///Users/xxx/foo.txt&line=123
+###   $ editorkicker texteditor://open?file=/Users/xxx/foo.txt&line=123
+###   $ editorkicker texteditor://open?url=file:///Users/xxx/foo.txt&line=123
+###
+
+set -eu
+
+DEBUG=${DEBUG:-}
+logfile="/tmp/editorkicker.log"
+now=$(date +'%Y-%m-%d %H:%M:%S')
+
+debug() {
+    if [ -n "$DEBUG" ]; then
+        echo "[$now]" "$*" >> $logfile
+    fi
+}
+
+abort() {
+    echo "[$now] [ERROR] $*" >> $logfile
+    echo "[ERROR] $*" >&2
+    exit 1
+}
+
+### create command file (if not exist)
+command_file="$HOME/.config/EditorKicker/command"
+if [ ! -f "$command_file" ]; then
+    mkdir -p $(dirname "$command_file")
+    cat <<'END' > "$command_file"
+ code -g "$file":$line              # VS Code
+#mate -l $line "$file"              # TextMate
+#subl "$file":$line                 # Sublime
+#pycharm --line $line "$file"       # PyCharm
+#emacsclient -n +$line "$file"      # Emacs
+#mvim +$line "$file"                # MacVim
+#cot -l $line "$file"               # CotEditor
+#zed "$file"                        # Zed (seems not support line number option)
+END
+fi
+
+### exit if argument not specified
+if [ $# = 0 ]; then
+    exit 0
+fi
+
+### print help message
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    cat <<'END'
+Usage:
+  $ editorkicker texteditor://open?url=file://<filepath>&line=<number>
+  $ editorkicker texteditor://open?file=<filepath>&line=<number>
+  $ editorkicker texteditor://<filepath>&line=<number>
+END
+    exit 0
+fi
+
+### parse URL
+arg="$1"
+case "$arg" in
+texteditor://open\?url=*|texteditor://open/\?url=*)
+    file=$(echo "$arg" | sed -E 's/^.*\?url=file:\/\/([^&?]*).*/\1/')
+    line=$(echo "$arg" | sed -E 's/^.*[&?]line=([0-9]*).*/\1/')
+    ;;
+texteditor://open\?file=*|texteditor://open/\?file=*)
+    file=$(echo "$arg" | sed -E 's/^.*\?file=([^&?]*).*/\1/')
+    line=$(echo "$arg" | sed -E 's/^.*[&?]line=([0-9]*).*/\1/')
+    ;;
+texteditor://*)
+    file=$(echo "$arg" | sed -E 's/^[a-z]+://([^&?]*).*/\1/')
+    line=$(echo "$arg" | sed -E 's/^.*[&?]line=([0-9]*).*/\1/')
+    ;;
+*)
+    abort "unexpected URL ($arg)"
+esac
+
+debug "arg='$arg', file='$file', line='$line'"
+
+### kick texteditor command
+command=$(grep -Ev '^ *(#|$)' "$command_file" || true)
+debug "command='$command'"
+. "$command_file"
