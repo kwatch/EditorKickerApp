@@ -21,7 +21,7 @@ it will work on any macOS version and any CPU architecture.
 Install
 -------
 
-1. Download [zip file](https://github.com/kwatch/EditorKickerApp/archive/refs/tags/EditorKicker-v0.1.0.zip)
+1. Download [zip file](https://github.com/kwatch/EditorKickerApp/archive/refs/tags/v0.1.0.zip)
    from [download page](https://github.com/kwatch/EditorKickerApp/tags).
 2. Unzip it and move EditorKicker.app to '/Applications' folder.
 3. Double click EditorKicker.app under '/Applications' folder.
