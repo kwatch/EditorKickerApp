@@ -23,9 +23,9 @@ SetFile -a C "$appdir"
 Rez -append "$rsrc" -o "$appdir"/Icon?
 SetFile -a V "$appdir"/Icon?
 rm "$rsrc" "$icon"
-osascript -e 'tell application "Finder" to quit'
-osascript -e 'delay 2'
-osascript -e 'tell application "Finder" to activate'
+#osascript -e 'tell application "Finder" to quit'
+#osascript -e 'delay 2'
+#osascript -e 'tell application "Finder" to activate'
 
 ### Report result.
 set +x
