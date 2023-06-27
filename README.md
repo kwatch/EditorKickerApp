@@ -22,15 +22,16 @@ Install
 -------
 
 1. Download [zip file](https://github.com/kwatch/EditorKickerApp/archive/refs/tags/v0.1.0.zip)
-   from [download page](https://github.com/kwatch/EditorKickerApp/tags).
-2. Unzip it and move EditorKicker.app to '/Applications' folder.
-3. Double click EditorKicker.app under '/Applications' folder.
+   from [download page](https://github.com/kwatch/EditorKickerApp/tags) and unzip it.
+2. Double click `setup.command` script (!!!IMPORTANT!!!).
+3. Move EditorKicker.app to '/Applications' folder.
+4. Double click EditorKicker.app under '/Applications' folder.
    This will generates `$HOME/.config/EditorKicker/command` file.
-4. Open and edit `$HOME/.config/EditorKicker/command` file.
-5. Install command line tool of your favorite editor.
+5. Open `$HOME/.config/EditorKicker/command` file and edit it to select text editor command.
+6. Install command line tool of your favorite editor.
    See the next section for details.
-6. Run `open texteditor://open?url=file://<filepath>&line=<number>` in Terminal.app
-   and confirm that text editor will open the file.
+7. Run `open texteditor://open?url=file://<filepath>&line=<number>` in Terminal.app
+   and confirm that your favorite text editor will open the file.
    For example, `open texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21`.
 
 
