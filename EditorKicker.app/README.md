@@ -281,9 +281,9 @@ EditorKicker.app supports the following URL format.
 
 Examples:
 
-* [texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21](texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21)
-* [texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21](texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21)
-* [texteditor:///Applications/EditorKicker.app/README.md?line=21](texteditor:///Applications/EditorKicker.app/README.md?line=21)
+* <a href="texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21">texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21</a>
+* <a href="texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21">texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21</a>
+* <a href="texteditor:///Applications/EditorKicker.app/README.md?line=21">texteditor:///Applications/EditorKicker.app/README.md?line=21</a>
 
 
 Internal Details
