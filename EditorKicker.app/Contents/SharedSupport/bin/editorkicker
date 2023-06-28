@@ -89,4 +89,4 @@ debug "arg='$arg', file='$file', line='$line'"
 command=$(grep -Ev '^ *(#|$)' "$command_file" || true)
 debug "command='$command'"
 export PATH="$PATH":/usr/local/bin
-. "$command_file"
+. "$command_file" 2>>$logfile
