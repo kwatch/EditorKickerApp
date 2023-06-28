@@ -88,4 +88,5 @@ debug "arg='$arg', file='$file', line='$line'"
 ### kick texteditor command
 command=$(grep -Ev '^ *(#|$)' "$command_file" || true)
 debug "command='$command'"
+export PATH="$PATH":/usr/local/bin
 . "$command_file"
