@@ -275,15 +275,15 @@ Custom URL Schema Format
 
 EditorKicker.app supports the following URL format.
 
-* `texteditor://open?url=file://<filepath>&line=<number>`
-* `texteditor://open?file=<filepath>&line=<number>`
 * `texteditor://<filepath>?line=<number>`
+* `texteditor://open?file=<filepath>&line=<number>`
+* `texteditor://open?url=file://<filepath>&line=<number>`
 
 Examples:
 
-* [texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21](texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21)
-* [texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21](texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21)
-* [texteditor:///Applications/EditorKicker.app/README.md?line=21](texteditor:///Applications/EditorKicker.app/README.md?line=21)
+* texteditor:///Applications/EditorKicker.app/README.md?line=21
+* texteditor://open?file=/Applications/EditorKicker.app/README.md&line=21
+* texteditor://open?url=file:///Applications/EditorKicker.app/README.md&line=21
 
 
 Internal Details
