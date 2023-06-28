@@ -9,7 +9,7 @@
 ###   $ editorkicker texteditor://open?file=/Users/xxx/foo.txt&line=123
 ###   $ editorkicker texteditor://open?url=file:///Users/xxx/foo.txt&line=123
 ###
-### $Release: 0.2.0 $
+### $Release: 0.2.1 $
 ### $Copyright: copyright(c) 2023 kuwata-lab.com all rights reserved $
 ### $License: MIT License $
 ###
